@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block contenido%}
+<h2>
+    A continuación se muestran los productos disponibles en el catálogo:
+</h2>
+<ul>
+    {% for p in productos %}
+    <li><a href="{{ url_for('productos.detalles', id=p.id)}}">{{p["nombre"]}}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
