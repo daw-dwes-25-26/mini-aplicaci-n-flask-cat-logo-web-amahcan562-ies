@@ -6,7 +6,7 @@
 </h2>
 <ul>
     {% for p in productos %}
-    <li><a href="{{ url_for('detalle', id=p.id)}}">{{p["nombre"]}}</a></li>
+    <li><a href="{{ url_for('productos.detalles', id=p.id)}}">{{p["nombre"]}}</a></li>
     {% endfor %}
 </ul>
 

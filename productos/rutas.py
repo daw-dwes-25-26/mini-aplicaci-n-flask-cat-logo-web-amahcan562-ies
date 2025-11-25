@@ -19,3 +19,10 @@ productos = [
 @productos_bp.route("/")
 def index():
     return render_template("index.html", productos = productos)
+
+
+@productos_bp.route("/item/<int:id>")
+def detalles(id):
+    for item in productos:
+        if item["id"] == id:
+            return render_template("detalle.html", producto = item)
